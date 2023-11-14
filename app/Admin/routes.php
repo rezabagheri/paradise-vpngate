@@ -14,5 +14,6 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
 
     $router->resource('servers', ServerController::class);
+    $router->resource('notifications', NotificationController::class);
 
 });
