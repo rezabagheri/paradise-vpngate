@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\ConfigController;
 use App\Admin\Controllers\ServerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("/servers/list", [ServerController::class, 'list']);
+Route::get('/configs/{trigger}', [ConfigController::class, 'getNotification']);

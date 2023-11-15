@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\ConfigController;
 use Illuminate\Routing\Router;
 
 Admin::routes();
@@ -15,5 +16,7 @@ Route::group([
 
     $router->resource('servers', ServerController::class);
     $router->resource('notifications', NotificationController::class);
+    $router->resource('configs', ConfigController::class);
+
 
 });
